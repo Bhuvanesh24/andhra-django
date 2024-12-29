@@ -3,10 +3,7 @@ from django.http import JsonResponse
 from .models import *
 import csv , os,io,csv
 from django.core.exceptions import ObjectDoesNotExist
-from django.views.decorators.csrf import csrf_exempt
 from django.db.models import Sum
-from django.core.files.storage import default_storage
-from django.conf import settings
 from django.http import JsonResponse
 from django.core.exceptions import ObjectDoesNotExist
 from django.apps import apps
@@ -286,7 +283,7 @@ def get_factors(request, district_id, year,month):
             }
             print(data_dict)
             # Make a POST request to the FastAPI endpoint
-            response = requests.post(f'{FASTAPI_URL}get-factors', json=data_dict)
+            response = requests.post(f'{FASTAPI_URL}get-factors/',json=data_dict)
 
             if response.status_code == 200:
                 return JsonResponse(response.json(), status=200)
