@@ -40,8 +40,6 @@ def get_simulator(request):
     inflow = int(request.GET.get("inflow"))
     outflow = int(request.GET.get("outflow"))
     
-
-
     data = {
         "evaporation": evaporation,
         "rainfall": rainfall,
@@ -50,6 +48,6 @@ def get_simulator(request):
         "inflow": inflow,
         "outflow": outflow,
         }
-    response = requests.post(f'${FASTAPI_URL}predict/', json=data)
+    response = requests.post(f'{FASTAPI_URL}predict/', json=data)
     # Return response from FastAPI
     return JsonResponse(response.json(), status=200)
