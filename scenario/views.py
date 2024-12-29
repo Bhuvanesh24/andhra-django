@@ -50,6 +50,6 @@ def get_simulator(request):
         "inflow": inflow,
         "outflow": outflow,
         }
-    response = requests.post(FASTAPI_URL, json=data)
+    response = requests.post(f'${FASTAPI_URL}/predict/', json=data)
     # Return response from FastAPI
     return JsonResponse(response.json(), status=200)
