@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from forecast.models import District,Usage
 import requests
 # Create your views here.
-FASTAPI_URL = "andhra-fastapi-production.up.railway.app/scenario/"
+FASTAPI_URL = "https://web-production-c9a1.up.railway.app/scenario/"
 
 def get_data(request, district_id, year):
     if request.method == "GET":

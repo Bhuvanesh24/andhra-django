@@ -19,7 +19,7 @@ from django.http import HttpResponse
 # scalar_x_path = os.path.join(MODEL_DIR,"f_usage_x.pkl")
 # scalar_y_path = os.path.join(MODEL_DIR,"f_usage_y.pkl")
 
-FASTAPI_URL = "andhra-fastapi-production.up.railway.app/forecast/"
+FASTAPI_URL = "https://web-production-c9a1.up.railway.app/forecast/"
 
 def test(request):
     return JsonResponse({"test":"Fine"})

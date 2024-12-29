@@ -14,7 +14,7 @@ from django.apps import apps
 
 
 
-FASTAPI_URL = "andhra-fastapi-production.up.railway.app/reservoir/"
+FASTAPI_URL = "https://web-production-c9a1.up.railway.app/reservoir/"
 
 
 
