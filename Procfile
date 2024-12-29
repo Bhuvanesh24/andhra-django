@@ -1,1 +1,1 @@
-gunicorn reservoir_management.wsgi:application
+web: gunicorn reservoir_management.wsgi:application
